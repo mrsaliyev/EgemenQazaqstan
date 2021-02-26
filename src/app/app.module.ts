@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LastNewsComponent } from './last-news/last-news.component';
-import { MainNewsComponent } from './main-news/main-news.component';
 import { ContainerComponent } from './container/container.component';
+import { ErrorComponent } from './error/error.component';
+import {MainNewsComponent} from './main-news/main-news.component';
+import {PhotoNewsComponent} from './photo-news/photo-news.component';
+import {VideoNewsComponent} from './video-news/video-news.component';
+import {ArticleComponent} from './article/article.component';
+import {RouterModule} from '@angular/router';
+import {routes} from './app.route';
 
 @NgModule({
   declarations: [
@@ -15,12 +20,17 @@ import { ContainerComponent } from './container/container.component';
     HeaderComponent,
     FooterComponent,
     LastNewsComponent,
+    ContainerComponent,
     MainNewsComponent,
-    ContainerComponent
+    PhotoNewsComponent,
+    VideoNewsComponent,
+    ArticleComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
