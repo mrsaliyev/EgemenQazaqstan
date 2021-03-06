@@ -12,6 +12,11 @@ export class MainNewsComponent implements OnInit {
   // tslint:disable-next-line:typedef variable-name
    message: string;
 
+   news: string[] = ['First news', 'Second News', 'Third News', 'Fourth news', 'Fifth news'];
+   public titleStyles = {
+    color: 'blue',
+    fontStyle: 'italic'
+   };
   ngOnInit(): void {
   }
   // tslint:disable-next-line:typedef

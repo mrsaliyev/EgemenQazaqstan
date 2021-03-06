@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title = 'Egemen Qazaqstan';
+  cash1 = 420;
+  cash2 = 500;
+  cash3 = 60;
+  date = new Date();
+
   constructor() { }
 
   ngOnInit(): void {

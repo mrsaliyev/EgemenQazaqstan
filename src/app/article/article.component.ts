@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
+  news: string[] = ['First news', 'Second News', 'Third News', 'Fourth news', 'Fifth news'];
+  public titleStyles = {
+    color: 'green',
+    fontStyle: 'italic'
+  };
   constructor() { }
 
   ngOnInit(): void {

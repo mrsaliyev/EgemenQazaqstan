@@ -7,6 +7,10 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class LastNewsComponent implements OnInit {
   @Input() public parentData;
+
+  isGreen = true;
+  dollar: number;
+  kzt: number;
   constructor() { }
 
   ngOnInit(): void {

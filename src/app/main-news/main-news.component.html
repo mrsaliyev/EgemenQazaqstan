@@ -10,30 +10,13 @@
 
   <h1>Photo news</h1>
   <div class="container">
-    <div class="row">
-      <div class="col-4 sm">
-        <h3>News 1</h3>
-        <p>Text With picture</p>
-      </div>
-      <div class="col-4 sm">
-        <h3>News 2</h3>
-        <p>Text With picture</p>
-      </div>
-      <div class="col-4 sm">
-        <h3>News 3</h3>
+    <div class="row" *ngIf="news.length > 0">
+      <div class="col-4 sm" *ngFor="let new of news">
+        <h3 [ngStyle]="titleStyles">{{ new | uppercase}}</h3>
         <p>Text With picture</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-6 sm">
-        <h3>News 4</h3>
-        <p>Text With picture</p>
-      </div>
-      <div class="col-6 sm">
-        <h3>News 5</h3>
-        <p>Text With picture</p>
-      </div>
-    </div>
+    <p *ngIf="news.length == 0"> No data</p>
   </div>
 
 

@@ -13,6 +13,8 @@ import {VideoNewsComponent} from './video-news/video-news.component';
 import {ArticleComponent} from './article/article.component';
 import {RouterModule} from '@angular/router';
 import {routes} from './app.route';
+import {CurrencyConverterPipe } from './pipes/currency-converter.pipe';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import {routes} from './app.route';
     PhotoNewsComponent,
     VideoNewsComponent,
     ArticleComponent,
-    ErrorComponent
+    ErrorComponent,
+    CurrencyConverterPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
