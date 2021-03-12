@@ -1,11 +1,11 @@
 <h1>Artilce page</h1>
 <div class="container">
-  <div class="row" *ngIf="news.length > 0">
-    <div class="col-4 sm" *ngFor="let new of news">
-      <h3 [ngStyle]="titleStyles">{{ new | uppercase}}</h3>
-      <p>Text With picture</p>
+  <div class="row" *ngIf="newsList.length > 0">
+    <div class="col-4 sm" *ngFor="let new of newsList">
+      <h4 [ngStyle]="titleStyles">{{ new.name | uppercase}}</h4>
+      <p>{{new.description}}</p>
     </div>
   </div>
-  <p *ngIf="news.length == 0"> No data</p>
+  <p *ngIf="newsList.length == 0"> No data</p>
 </div>
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {News} from '../news';
+import {NewsService} from '../services/news.service';
 
 @Component({
   selector: 'app-article',
@@ -7,14 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
-  news: string[] = ['First news', 'Second News', 'Third News', 'Fourth news', 'Fifth news'];
+  newsList: News[];
   public titleStyles = {
     color: 'green',
     fontStyle: 'italic'
   };
-  constructor() { }
+  constructor(private newsService: NewsService) { }
 
   ngOnInit(): void {
+    this.newsList = this.newsService.getNews();
   }
 
 }

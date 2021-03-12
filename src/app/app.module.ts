@@ -15,6 +15,8 @@ import {RouterModule} from '@angular/router';
 import {routes} from './app.route';
 import {CurrencyConverterPipe } from './pipes/currency-converter.pipe';
 import {FormsModule} from '@angular/forms';
+import {NewsService} from './services/news.service';
+import {LoggingService} from './services/logging.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,7 @@ import {FormsModule} from '@angular/forms';
     RouterModule.forRoot(routes),
     FormsModule,
   ],
-  providers: [],
+  providers: [NewsService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
