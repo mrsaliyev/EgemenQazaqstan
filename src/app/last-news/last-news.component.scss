@@ -2,6 +2,10 @@
   background-color: blanchedalmond;
   margin-top: 25px;
   padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .text-red{
@@ -10,4 +14,13 @@
 
 .text-green{
   color: green;
+}
+
+.t{
+  border-left: 3px solid grey;
+  height: max(1000px);
+  position: absolute;
+  left: 2%;
+  margin-left: 3px;
+  top: 25px;
 }

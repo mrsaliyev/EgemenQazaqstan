@@ -1,6 +1,14 @@
 <div class="lastNew">
+  <div class="t"></div>
   <p [ngClass]="isGreen ? 'text-green' : 'text-red'"> <b>{{parentData}}</b> from container</p>
-  <p>There will be news in the last month published</p>
+  <p>Last news in the period of last month</p>
+
+  <ul *ngIf="newsList.length > 0">
+    <li *ngFor="let news of newsList">
+      <a  href="#" [ngStyle]="titleStyles">{{ news.name | uppercase}}</a>
+    </li>
+  </ul>
+  <p *ngIf="newsList.length == 0"> No data</p>
 
   <p>KZT: <input type="text" [(ngModel)]="kzt"/>
     Dollar : {{kzt | currencyConverter:'KZ'}} </p>

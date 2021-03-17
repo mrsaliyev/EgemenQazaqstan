@@ -1,11 +1,18 @@
-<h1>Photo news</h1>
-<div class="container">
-  <div class="row" *ngIf="newsList.length > 0">
-    <div class="col-4 sm" *ngFor="let news of newsList">
-      <h5 [ngStyle]="titleStyles">{{ news.name | uppercase}}</h5>
-      <p>{{news.description}}</p>
+<div class="row" *ngIf="newsList.length > 0">
+  <div class="card" style="width: 18rem;" *ngFor="let news of newsList">
+    <img src="{{news.path}}" class="card-img-top" alt="image">
+    <div class="card-body">
+      <h5 class="card-title">{{news.name}}</h5>
+      <p class="card-text">{{news.description}}</p>
+      <a href="#" class="btn btn-primary">Open in full page</a>
     </div>
   </div>
-  <p *ngIf="newsList.length == 0"> No data</p>
 </div>
+<p *ngIf="newsList.length == 0"> No data</p>
+
+
+
+
+
+
 
