@@ -17,6 +17,7 @@ import {CurrencyConverterPipe } from './pipes/currency-converter.pipe';
 import {FormsModule} from '@angular/forms';
 import {NewsService} from './services/news.service';
 import {LoggingService} from './services/logging.service';
+import {AdminModule} from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -30,13 +31,14 @@ import {LoggingService} from './services/logging.service';
     VideoNewsComponent,
     ArticleComponent,
     ErrorComponent,
-    CurrencyConverterPipe
+    CurrencyConverterPipe,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     FormsModule,
+    AdminModule
   ],
   providers: [NewsService, LoggingService],
   bootstrap: [AppComponent]
