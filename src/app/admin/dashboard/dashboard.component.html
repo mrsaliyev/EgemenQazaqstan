@@ -1,1 +1,14 @@
-<p>dashboard works!</p>
+<h1 align="center">Articles</h1>
+<div class="container">
+  <div class="row" *ngIf="newsList.length > 0">
+    <div class="col-4 sm" *ngFor="let new of newsList">
+      <h4>{{ new.name | uppercase}}</h4>
+      <p>{{ new.description }}</p>
+      <img src="{{ new.path }}" class="card-img-top" alt="image">
+      <iframe width="350" height="200" [src]="getEmbedUrl(new)" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+  <p *ngIf="newsList.length == 0"> No data</p>
+</div>

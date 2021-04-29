@@ -3,11 +3,24 @@
     <div class="col-4 sm" id="logo">
       <a class="navbar-brand" routerLink="/mainNews">{{title | uppercase}}</a>
     </div>
-    <div class="col-6">
+    <div class="col-4">
       <form class="d-flex">
         <input class="form-control me-6" type="search" placeholder="Search" aria-label="Search">
         <button class="btn" type="submit">Search</button>
       </form>
+    </div>
+    <div class="col-4">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="!authenticated">
+          <li class="nav-item">
+            <a routerLink="/login" class="nav-link">Login</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="authenticated">
+          <li class="nav-item">
+            <a routerLink="/login" class="nav-link" (click)="logout()">Logout</a>
+          </li>
+        </ul>
     </div>
 
   </div>

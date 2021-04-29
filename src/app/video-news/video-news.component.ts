@@ -18,7 +18,19 @@ export class VideoNewsComponent implements OnInit {
   constructor(private newsService: NewsService, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
-    this.newsList = this.newsService.getNews();
+    this.newsService.getNews().subscribe
+    (
+      (response) =>
+      {
+        this.newsList = response;
+      },
+
+      // tslint:disable-next-line:no-shadowed-variable
+      (error) =>
+      {
+        console.log('Error ' + error);
+      }
+    );
   }
 
   // tslint:disable-next-line:typedef

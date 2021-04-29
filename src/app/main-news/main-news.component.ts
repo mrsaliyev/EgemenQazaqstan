@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {News} from '../news';
 import {NewsService} from '../services/news.service';
+import {error} from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-main-news',
@@ -20,7 +21,19 @@ export class MainNewsComponent implements OnInit {
     fontStyle: 'italic'
    };
   ngOnInit(): void {
-    this.newsList = this.newsService.getNews();
+    this.newsService.getNews().subscribe
+    (
+      (response) =>
+      {
+        this.newsList = response;
+      },
+
+      // tslint:disable-next-line:no-shadowed-variable
+      (error) =>
+      {
+        console.log('Error ' + error);
+      }
+    );
   }
   // tslint:disable-next-line:typedef
   sendData(message) {

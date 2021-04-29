@@ -17,7 +17,19 @@ export class ArticleComponent implements OnInit {
   constructor(private newsService: NewsService) { }
 
   ngOnInit(): void {
-    this.newsList = this.newsService.getNews();
+    this.newsService.getNews().subscribe
+    (
+      (response) =>
+      {
+        this.newsList = response;
+      },
+
+      // tslint:disable-next-line:no-shadowed-variable
+      (error) =>
+      {
+        console.log('Error ' + error);
+      }
+    );
   }
 
 }

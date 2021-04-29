@@ -1,0 +1,58 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "name": "3 Factors That Drive the U.S. Dollar",
+      "description": "The economy's performance is at the heart of the decision to buy or sell dollars. A strong economy will attract investment from all over the world due to the perceived safety and the ability to achieve an acceptable rate of return on investment. Since investors always seek out the highest yield that is predictable or \"safe,\" an increase in investment, particularly from abroad, creates a strong capital account and a resulting high demand for dollars.",
+      "link": "kkkH-0khoQw",
+      "path": "assets/images/dollar.jpg"
+    },
+    {
+      "id": 2,
+      "name": "COVID research updates: Viral variant causes a more deadly form of COVID",
+      "description": "11 March — Viral variant causes a more deadly form of COVID People infected with the coronavirus variant called B.1.1.7 are at a higher risk of dying than are people infected with other circulating variants, regardless of their age, sex and pre-existing health problems.",
+      "link": "ePZi06By0zg",
+      "path": "assets/images/covid.png"
+    },
+    {
+      "id": 3,
+      "name": "Joe Biden congratulated Kassym-Zhomart Tokayev and Kazakhstan is on Nauryz",
+      "description": "This year the Republic of Kazakhstan celebrates the 30th anniversary of its Independence. Congratulating you on this event, I assure that my Administration attaches great importance to working with you and the people of Kazakhstan. For many years we have maintained a close partnership in the field of nuclear non-proliferation and strengthening peace and security.",
+      "link": "o366ngP9NaU",
+      "path": "assets/images/usa.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Challenge to prevent Internet fraud launched in the villages of North Kazakhstan region",
+      "description": "The region is witnessing a surge in online fraud. According to the press service of the police department, 150 such crimes have already been registered this year.",
+      "link": "vWL8FiyzhdY",
+      "path": "assets/images/challenge.jpg"
+    },
+    {
+      "id": 5,
+      "name": "From 2021, the requirements for working out the grant have been simplified - Ministry of Education",
+      "description": "In 2016, amendments were made to the Law \"On Education\" regarding the development of university graduates who studied under state educational grants. According to the amendments adopted by the Parliament, the grant holders had to work in their specialty in state organizations for at least three years.",
+      "link": "hZ310om9JCY",
+      "path": "assets/images/education.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Alexey Tsoi spoke about the progress of vaccination in Kazakhstan",
+      "description": "The head of the Ministry of Health noted that, on behalf of the Head of State, on February 1, 2021, vaccination against coronavirus infection has begun in the Republic of Kazakhstan.",
+      "link": "YnD20HfQb_Q",
+      "path": "assets/images/vacination.png"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "madiyar",
+      "password": "madiyar"
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "admin"
+    }
+  ]
+}

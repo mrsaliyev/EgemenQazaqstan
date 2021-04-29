@@ -14,10 +14,12 @@ import {ArticleComponent} from './article/article.component';
 import {RouterModule} from '@angular/router';
 import {routes} from './app.route';
 import {CurrencyConverterPipe } from './pipes/currency-converter.pipe';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NewsService} from './services/news.service';
 import {LoggingService} from './services/logging.service';
 import {AdminModule} from './admin/admin.module';
+import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +34,16 @@ import {AdminModule} from './admin/admin.module';
     ArticleComponent,
     ErrorComponent,
     CurrencyConverterPipe,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    AdminModule
+    AdminModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [NewsService, LoggingService],
   bootstrap: [AppComponent]

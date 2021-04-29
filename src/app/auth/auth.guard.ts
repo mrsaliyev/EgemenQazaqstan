@@ -1,15 +1,20 @@
+
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate, Router } from '@angular/router';
+import {AuthService} from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean {
-    console.log('AuthGuard#canActivate called');
-    return true;
+
+  constructor(private authService: AuthService, private router: Router) { }
+
+  // tslint:disable-next-line:typedef
+  canActivate() {
+    if (this.authService.isLoggedIn()) {
+      this.router.navigate(['/secret-random-number']);
+    }
+    return !this.authService.isLoggedIn();
   }
 }
