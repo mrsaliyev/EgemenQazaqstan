@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
   // tslint:disable-next-line:typedef
   canActivate() {
     if (this.authService.isLoggedIn()) {
-      this.router.navigate(['/secret-random-number']);
+      this.router.navigate(['/dashboard']);
     }
     return !this.authService.isLoggedIn();
   }

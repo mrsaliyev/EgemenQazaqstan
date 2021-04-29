@@ -20,6 +20,8 @@ import {LoggingService} from './services/logging.service';
 import {AdminModule} from './admin/admin.module';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import {UserService} from './services/user.service';
+import {AuthService} from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [NewsService, LoggingService],
+  providers: [NewsService, LoggingService, UserService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
