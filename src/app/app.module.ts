@@ -19,7 +19,7 @@ import {NewsService} from './services/news.service';
 import {LoggingService} from './services/logging.service';
 import {AdminModule} from './admin/admin.module';
 import {HttpClientModule} from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
+import {LoginComponent} from './login/login.component';
 import {UserService} from './services/user.service';
 import {AuthService} from './auth/auth.service';
 

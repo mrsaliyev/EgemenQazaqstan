@@ -46,13 +46,18 @@
   "users": [
     {
       "id": 1,
-      "username": "madiyar",
+      "login": "madiyar",
       "password": "madiyar"
     },
     {
       "id": 2,
-      "username": "admin",
+      "login": "admin",
       "password": "admin"
+    },
+    {
+      "login": "",
+      "password": "",
+      "id": 3
     }
   ]
 }

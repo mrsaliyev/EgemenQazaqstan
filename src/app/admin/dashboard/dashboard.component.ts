@@ -13,13 +13,14 @@ export class DashboardComponent implements OnInit {
   message = '';
   newsList: News[];
   private sanitizer: any;
+  isGreen = true;
 
   constructor(private http: HttpClient, private newsService: NewsService) { }
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/api/user', {withCredentials: true}).subscribe(
+    this.http.get('http://localhost:3000/api/users', {withCredentials: true}).subscribe(
       (res: any) => {
-        this.message = `Hi ${res.name}`;
+        this.message = `Hi ${res.login}`;
         Emitters.authEmitter.emit(true);
       },
       err => {

@@ -16,10 +16,10 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  login(user: { username: string, password: string }): Observable<boolean> {
-    return this.http.post<any>(`${config.apiUrl}/login`, user)
+  login(user: { password: any; login: any }): Observable<boolean> {
+    return this.http.post<any>(`${config.apiUrl}/users`, user)
       .pipe(
-        tap(tokens => this.doLoginUser(user.username, tokens)),
+        tap(tokens => this.doLoginUser(user.login, tokens)),
         mapTo(true),
         catchError(error => {
           alert(error.error);
@@ -29,7 +29,7 @@ export class AuthService {
 
   // tslint:disable-next-line:typedef
   logout() {
-    return this.http.post<any>(`${config.apiUrl}/logout`, {
+    return this.http.post<any>(`${config.apiUrl}/users`, {
       refreshToken: this.getRefreshToken()
     }).pipe(
       tap(() => this.doLogoutUser()),
@@ -60,8 +60,8 @@ export class AuthService {
   }
 
   // tslint:disable-next-line:typedef
-  private doLoginUser(username: string, tokens: Tokens) {
-    this.loggedUser = username;
+  private doLoginUser(login: string, tokens: Tokens) {
+    this.loggedUser = login;
     this.storeTokens(tokens);
   }
 

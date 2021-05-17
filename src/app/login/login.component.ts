@@ -24,13 +24,15 @@ export class LoginComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  get f() { return this.loginForm.controls; }
+  get f() {
+    return this.loginForm.controls;
+  }
 
   // tslint:disable-next-line:typedef
   login() {
     this.authService.login(
       {
-        username: this.f.username.value,
+        login: this.f.login.value,
         password: this.f.password.value
       }
     )

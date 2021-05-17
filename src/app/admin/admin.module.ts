@@ -7,7 +7,7 @@ import {AdminRoutingModule} from './admin-routing.module';
     DashboardComponent
   ],
   imports: [
-    AdminRoutingModule
+    AdminRoutingModule,
   ],
   exports: []
 })
